@@ -1,0 +1,169 @@
+git status
+to show the status of our repo either to add any files etc.
+
+Local changes called as staging
+cmd ==> git add filename 
+then filename will be staging
+
+commit the filename
+cmd==> git commit -m "message"
+now the file will be commited
+
+to get the log 
+cmd==>git log
+
+to show the difference between git commitsof same file use git diff based on commit ids
+cmd==> git diff commit_id1 commit_id2
+
+create a git branch to work with spefic files
+cmd==> git branch branchname
+
+type the command checkout to work from that branch bydefault
+it works from *master branch to know the availble branches 
+type the below command
+
+cmd==> git branch
+displays list of branch
+Note : * indicates you are working in current branch
+
+to create new branch
+cmd==>git branch branchname
+
+to checkin with the newbranch
+cmd==>git checkout branchname
+
+to check status type git branch and check * points to your 
+new branch
+
+a single command to checkout and branch creation is
+cmd==>git checkout -b branchname
+
+to delete a branch we use option -d
+cmd==>git branch -d branchname
+
+to merge child branch file to master branch
+we use the command git merge
+need to follow some instruction 
+1) need to check from which child branch to which parent branch you need to merge
+2)checkout with parent branch and type the following command
+cmd==> git merge childbranch
+the command will be success when there are no merge conflicts.
+if there are any merge conflicts identify the changes and make 
+the changes and perform the steps in sequence.
+
+need to work with remote repository
+cmd==> git remote add origin repo URL
+
+by tytping the following command you will come to know from where 
+you need to fetch and push the code
+cmd==>git remote -v
+
+after your local modifications are done we need to push to global
+repo using the command
+cmd==>git push -u origin master
+
+
+Fetch VS Pull
+
+fetch and pull both download the list of all files to our local
+repo.Fetch will show only modified file details and will not download
+the modified content in a file, but Pull will download all files
+with all modifications
+
+so most of the users use pull instead of fetch
+
+cmd==>git pull
+cmd==>git fetch
+
+reset to previous commit based on the issues
+all the previous commits will be deleted permantely
+
+cmd==>git reset --hard commit id
+
+revert means the files will not be deleted but it will undo 
+the commited changes on the file
+
+we can move to previous commits for reference using revert
+
+
+Build Automation:
+
+It is a process of preparing code fro producton to live environment
+
+there may different tools are used for Automation
+
+Automation means it automate the tasks which are done manually
+- Fast
+-Consistent process
+-repeatable
+-portable-will work on irrespectieve of machine / people
+-reliable-
+
+its developer centric process
+
+Continous Integration: happens when there are frequently code mergeing
+done by developers
+
+
+continous Integration means mergeing the code throughout the 
+day based on the issues identified in testing
+
+CI server will see the changes commited by developer and runs the 
+automated tests on code 
+
+Continous Integration advantages:
+
+-early detection of bugs: will help to team torespond quickly
+-no scramble at end, not bothered about integration also
+-frequent releases
+
+
+Continous Delivery : is making the code ready for production
+its a state befor production
+
+continous Deployment: deploying small codes to production
+Each deployment contains:
+Automatic Build
+Automatic testing
+Manual acceptance testing- means like decision to deploying
+
+Orchestration:
+automation the support of provisioning resources 
+A simple example :
+A montoring tool tells the load a particular service based
+on the load 
+A Orchestration tool helps in increasing the resources
+after the load it will remove the resources based on the command
+or script
+
+Advantages:
+-Scalability : with this we can scale up or down based on load
+-save manual time
+-Stability-report errors quickly
+
+Monitoring:
+It shows the data about the performance and stability of resources
+and infrastructure
+
+it collect data such as:
+usage of memory
+CPU
+Disk I/0
+logs
+network traffic
+-Advantages
+-Fast Recovery
+-Better root cause analysis
+
+
+Microservices:
+A micro service breaks the entire application into small loosely coupled service
+
+
+loosely coupled means interact with each other using stable and well defined application
+
+
+
+
+
+
